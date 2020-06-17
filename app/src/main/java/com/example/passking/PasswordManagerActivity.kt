@@ -60,6 +60,7 @@ class PasswordManagerActivity : Activity() {
         actionBar!!.setBackgroundDrawable(ColorDrawable(resources.getColor(R.color.colorPrimary)))
         _txtSite!!.requestFocus()
         _txtSite!!.isFocusableInTouchMode = true
+
         _btnInsert!!.setOnClickListener {
             val site = _txtSite!!.text.toString()
             val username = _txtUser!!.text.toString()
@@ -67,6 +68,10 @@ class PasswordManagerActivity : Activity() {
             val note = _txtNote!!.text.toString()
             db = (openHelper as DatabaseHelper).getWritableDatabase()
             insertData(site, username, password, note)
+            _txtSite!!.setText("")
+            _txtUser!!.setText("")
+            _txtPass!!.setText("")
+            _txtNote!!.setText("")
             Toast.makeText(applicationContext, "SAVED", Toast.LENGTH_SHORT).show()
         }
         _btnUpdate!!.setOnClickListener {
@@ -76,6 +81,10 @@ class PasswordManagerActivity : Activity() {
             val note = _txtNote!!.text.toString()
             db = (openHelper as DatabaseHelper).getWritableDatabase()
             updateData(site, username, password, note)
+            _txtSite!!.setText("")
+            _txtUser!!.setText("")
+            _txtPass!!.setText("")
+            _txtNote!!.setText("")
             Toast.makeText(applicationContext, "UPDATED", Toast.LENGTH_SHORT).show()
         }
     }

@@ -25,27 +25,28 @@
                 android:id="@+id/_site_"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/poppins_semibold"
                 android:paddingRight="25dp"
                 android:text="Google"
-                android:fontFamily="@font/poppins_semibold"
                 android:textColor="#000"
                 android:textSize="25sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.235" />
+                app:layout_constraintVertical_bias="0.585" />
 
             <TextView
                 android:id="@+id/_username_"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Username"
+                android:layout_marginTop="10dp"
                 android:fontFamily="@font/poppins"
+                android:text="Username"
                 android:textColor="#000"
                 android:textSize="16dp"
                 app:layout_constraintStart_toEndOf="@+id/_site_"
-                app:layout_constraintTop_toTopOf="@+id/_site_" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/_password_"
